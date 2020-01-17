@@ -1,0 +1,21 @@
+<div>
+    <h3>
+        <p>
+            Product-list 
+        </p>
+    </h3>
+</div>
+
+<div *ngFor="let product of products">
+    <a [title]="product.Name">
+        {{product.Name}}
+        {{product.Price}}
+    </a>
+    <div>
+        <p *ngIf="product.Description">
+        Description:{{product.Description}}
+        </p>
+    </div>
+    <button type="submit" name="Share" id="Share" (click)="getShare(product.Name)">Share</button>
+    {{message}}
+</div>
